@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import config from "./index";
 import logger from "./logger";
-//nice lesggooo hehehe g  egergregergergergferferf      wfwefwef
+//nice lesggooo hehehe g  egergregergergergferferf dfsdfsd
 const connectDB = async () => {
   try {
     await mongoose.connect(config.database_url);
