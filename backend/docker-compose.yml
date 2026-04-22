@@ -68,7 +68,8 @@ services:
       - api-monitoring-network
     restart: unless-stopped
     depends_on:
-      - postgres
+       postgres:
+        condition: service_healthy
 volumes:
   postgres_data:
     driver: local
