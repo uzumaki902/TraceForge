@@ -28,5 +28,9 @@ export const config = {
       process.env.RABBITMQ_URL ||
       "amqp://api_user:secure_password@localhost:5672/api_monitoring",
     queue: process.env.RABBITMQ_QUEUE || "api_hits",
+    publisherConfirms:
+      process.env.RABBITMQ_PUBLISHER_CONFIRMS === "true" || false, // MSGS LOST
+    retryAttempts: parseInt(process.env.RABBITMQ_RETRY_ATTEMPTS || "3", 10),
+    retryDelay: parseInt(process.env.RABBITMQ_RETRY_DELAY || "1000", 10),
   },
 };
