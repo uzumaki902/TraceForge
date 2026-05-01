@@ -33,4 +33,9 @@ export const config = {
     retryAttempts: parseInt(process.env.RABBITMQ_RETRY_ATTEMPTS || "3", 10),
     retryDelay: parseInt(process.env.RABBITMQ_RETRY_DELAY || "1000", 10),
   },
+  //JWT
+  jwt: {
+    secret: process.env.JWT_SECRET,
+    expiresIn: process.env.JWT_EXPIRES_IN,
+  },
 };
