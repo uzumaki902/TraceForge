@@ -38,4 +38,9 @@ export const config = {
     secret: process.env.JWT_SECRET,
     expiresIn: process.env.JWT_EXPIRES_IN,
   },
+  // Rate Limit
+  rateLimit: {
+    windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS || "900000", 10), // 15 minutes
+    maxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || "1000", 10), // 1000 req / 15 min per IP
+  },
 };
