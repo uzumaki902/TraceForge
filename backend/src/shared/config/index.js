@@ -44,3 +44,4 @@ export const config = {
     maxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || "1000", 10), // 1000 req / 15 min per IP
   },
 };
+export default config;
