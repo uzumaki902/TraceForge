@@ -5,6 +5,7 @@ import logger from "./logger.js";
 const { Pool } = pg;
 //connection and pool same hai idhar like dono ka meaning same hai pool
 //post gres have to understand the workking of pool connection mechanism and importance of it
+//aaj zyda kuch toh nhi kiya dekhte hai exam ke baad
 
 class PostgresConnection {
   constructor() {
